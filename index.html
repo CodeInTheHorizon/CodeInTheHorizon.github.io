@@ -40,9 +40,14 @@
     .top-socials img {
       width: 26px;
       height: 26px;
-      filter: invert(1);
       opacity: 0.85;
       transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    /* Make GitHub & LinkedIn white */
+    .top-socials a:nth-child(1) img,
+    .top-socials a:nth-child(2) img {
+      filter: invert(1);
     }
 
     .top-socials a:hover img {
@@ -72,12 +77,6 @@
     h1 {
       font-size: 3rem;
       margin: 0;
-    }
-
-    .subtitle {
-      font-size: 1.1rem;
-      color: #93c5fd;
-      margin-top: 12px;
     }
 
     .about {
@@ -134,15 +133,17 @@
     <a href="https://linkedin.com/in/codeinthehorizon" target="_blank" aria-label="LinkedIn">
       <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" alt="LinkedIn">
     </a>
+    <a href="https://www.instagram.com/codeinthehorizon_2026/" target="_blank" aria-label="Instagram">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram">
+    </a>
   </div>
 
   <div class="container">
 
     <!-- INTRO -->
     <section class="intro">
-      <div class="greeting">Hello, I’m 👋</div>
-      <h1>Kshitij Kumar Soni</h1>
-      <div class="subtitle">Computer Science Undergraduate</div>
+      <div class="greeting">Hello👋,There! </div>
+      <h1>Myself Kshitij Kumar Soni</h1>
 
       <p class="about">
         I am a Computer Science undergraduate focused on machine learning and
