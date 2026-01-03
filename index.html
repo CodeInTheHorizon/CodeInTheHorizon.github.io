@@ -27,6 +27,36 @@
       padding: 100px 20px 80px;
     }
 
+    /* TOP-RIGHT SOCIAL ICONS */
+    .top-socials {
+      position: fixed;
+      top: 24px;
+      right: 30px;
+      display: flex;
+      gap: 18px;
+      z-index: 2000;
+    }
+
+    .top-socials img {
+      width: 26px;
+      height: 26px;
+      filter: invert(1);
+      opacity: 0.85;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .top-socials a:hover img {
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 600px) {
+      .top-socials {
+        top: 18px;
+        right: 18px;
+      }
+    }
+
     /* INTRO */
     .intro {
       text-align: center;
@@ -91,22 +121,20 @@
     .project-card p {
       color: #cbd5f5;
     }
-
-    /* SHIELDS BADGES */
-    .badge-links {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      margin-top: 32px;
-    }
-
-    .badge-links img {
-      height: 28px;
-    }
   </style>
 </head>
 
 <body>
+
+  <!-- TOP RIGHT SOCIAL LINKS -->
+  <div class="top-socials">
+    <a href="https://github.com/CodeInTheHorizon" target="_blank" aria-label="GitHub">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub">
+    </a>
+    <a href="https://linkedin.com/in/codeinthehorizon" target="_blank" aria-label="LinkedIn">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" alt="LinkedIn">
+    </a>
+  </div>
 
   <div class="container">
 
@@ -121,16 +149,6 @@
         time-series forecasting, working with real-world datasets to build
         predictive models and data-driven solutions.
       </p>
-
-      <!-- SHIELDS SOCIAL BADGES -->
-      <div class="badge-links">
-        <a href="https://github.com/CodeInTheHorizon" target="_blank">
-          <img src="https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white" alt="GitHub">
-        </a>
-        <a href="https://linkedin.com/in/codeinthehorizon" target="_blank">
-          <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white" alt="LinkedIn">
-        </a>
-      </div>
     </section>
 
     <!-- PROJECTS -->
@@ -152,10 +170,11 @@
           academic information.
         </p>
       </div>
+
       <div class="project-card">
-        <h4>MS_Stock_Prediction</h4>
+        <h3>MS_Stock_Prediction</h3>
         <p>
-          LSTM-based stock price Prediction.
+          LSTM-based stock price prediction.
         </p>
       </div>
 
