@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Kshitij Kumar Soni | ML & Time-Series</title>
+  <title>Kshitij Kumar Soni | Computer Science</title>
 
   <style>
     html {
@@ -10,42 +10,64 @@
     }
 
     body {
-      font-family: system-ui, -apple-system, sans-serif;
       margin: 0;
-      background: 
-        linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)),
-        url("assets/github_portfolio_bg_image.jpeg") center / cover no-repeat fixed;
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #020617;
       color: #e5e7eb;
       line-height: 1.6;
     }
 
+    /* HERO SECTION */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+      background:
+        linear-gradient(rgba(2,6,23,0.75), rgba(2,6,23,0.75)),
+        url("assets/background.jpeg") center / cover no-repeat;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .greeting {
+      font-size: 1.2rem;
+      color: #cbd5f5;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      margin: 0;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #93c5fd;
+      margin-top: 12px;
+    }
+
+    /* MAIN CONTENT */
     .container {
       max-width: 1000px;
       margin: 0 auto;
       padding: 80px 20px;
     }
 
-    h1 {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
-    }
-
     h2 {
-      margin-top: 50px;
-      margin-bottom: 20px;
+      margin-top: 60px;
+      margin-bottom: 24px;
     }
 
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-
-    .subtitle {
+    p {
       color: #cbd5f5;
-      font-size: 1.1rem;
     }
 
-    /* Projects */
+    /* PROJECTS */
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -69,20 +91,14 @@
     .project-card h3 {
       margin-top: 0;
       margin-bottom: 10px;
-      font-size: 1.15rem;
     }
 
-    .project-card p {
-      color: #cbd5f5;
-      font-size: 0.95rem;
-    }
-
-    /* Links */
+    /* LINKS */
     .links {
       display: flex;
       gap: 24px;
-      margin-top: 20px;
       flex-wrap: wrap;
+      margin-top: 20px;
     }
 
     .link-card {
@@ -93,31 +109,38 @@
       border: 1px solid #1e293b;
       border-radius: 12px;
       padding: 12px 18px;
-      transition: border-color 0.2s ease, transform 0.2s ease;
+      text-decoration: none;
+      color: #e5e7eb;
+      transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
     .link-card:hover {
-      border-color: #38bdf8;
       transform: translateY(-3px);
-    }
-
-    .icon {
-      font-size: 1.3rem;
+      border-color: #38bdf8;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
 
-    <h1>Kshitij Kumar Soni</h1>
-    <p class="subtitle">
-      Computer Science Undergraduate · Machine Learning · Time Series
-    </p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="greeting">Hey, I’m 👋</div>
+      <h1>Kshitij Kumar Soni</h1>
+      <div class="subtitle">
+        Computer Science Undergraduate · Machine Learning · Time Series
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <main class="container">
 
     <p>
-      I am a Computer Science undergraduate focused on machine learning and time-series forecasting,
-      working with real-world datasets to build predictive models and data-driven solutions.
+      I am a Computer Science undergraduate focused on machine learning and
+      time-series forecasting, working with real-world datasets to build
+      predictive models and data-driven solutions.
     </p>
 
     <h2>Projects</h2>
@@ -131,14 +154,6 @@
         </p>
       </div>
 
-      <!-- <div class="project-card">
-        <h3>₿ Bitcoin Price Forecasting</h3>
-        <p>
-          Predictive modeling of cryptocurrency price trends using historical
-          market data and deep learning models.
-        </p>
-      </div> -->
-
       <div class="project-card">
         <h3>🤖 AI Chatbot for College Website</h3>
         <p>
@@ -146,22 +161,28 @@
           academic information.
         </p>
       </div>
-    </div>
+
+      <!-- <div class="project-card">
+        <h3>₿ Bitcoin Price Forecasting</h3>
+        <p>
+          Predictive modeling of cryptocurrency price trends using historical
+          market data and deep learning models.
+        </p>
+      </div>
+    </div> -->
 
     <h2>Links</h2>
 
     <div class="links">
       <a class="link-card" href="https://github.com/CodeInTheHorizon" target="_blank">
-        <span class="icon">🐙</span>
-        <span>GitHub</span>
+        🐙 GitHub
       </a>
-
       <a class="link-card" href="https://www.linkedin.com/in/YOUR-LINKEDIN-HERE" target="_blank">
-        <span class="icon">💼</span>
-        <span>LinkedIn</span>
+        💼 LinkedIn
       </a>
     </div>
 
-  </div>
+  </main>
+
 </body>
 </html>
