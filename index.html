@@ -26,7 +26,7 @@
 
     h2 {
       margin-top: 40px;
-      margin-bottom: 10px;
+      margin-bottom: 16px;
     }
 
     a {
@@ -34,27 +34,49 @@
       text-decoration: none;
     }
 
-    ul {
-      padding-left: 0;
-      list-style: none;
-    }
-
-    li {
-      margin-bottom: 16px;
-    }
-
     .subtitle {
       color: #cbd5f5;
     }
 
-    details summary {
-      cursor: pointer;
-      font-weight: 600;
+    /* Projects layout */
+    .projects {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
-    details p {
-      margin-top: 8px;
-      color: #d1d5db;
+    .project-card {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 20px;
+      width: calc(33.333% - 14px);
+      box-sizing: border-box;
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+    }
+
+    .project-card p {
+      color: #cbd5f5;
+      font-size: 0.95rem;
+    }
+
+    /* Subtle interaction */
+    .project-card:hover {
+      border-color: #38bdf8;
+      transform: translateY(-4px);
+      transition: 0.2s ease;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .project-card {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -62,7 +84,9 @@
 <body>
 
   <h1>Kshitij Kumar Soni</h1>
-  <p class="subtitle">Computer Science Undergraduate · Machine Learning · Time Series</p>
+  <p class="subtitle">
+    Computer Science Undergraduate · Machine Learning · Time Series
+  </p>
 
   <p>
     I am a Computer Science undergraduate focused on machine learning and time-series forecasting,
@@ -70,37 +94,32 @@
   </p>
 
   <h2>Projects</h2>
-  <ul>
-    <li>
-      <details>
-        <summary>Rainfall Prediction using LSTM</summary>
-        <p>
-          Time-series forecasting model trained on historical rainfall data,
-          evaluated using RMSE and MAE metrics.
-        </p>
-      </details>
-    </li>
 
-    <li>
-      <details>
-        <summary>Bitcoin Price Forecasting</summary>
-        <p>
-          Predictive modeling of cryptocurrency price trends using historical
-          market data and deep learning models.
-        </p>
-      </details>
-    </li>
+  <div class="projects">
+    <div class="project-card">
+      <h3>Rainfall Prediction using LSTM</h3>
+      <p>
+        Time-series forecasting model trained on historical rainfall data,
+        evaluated using RMSE and MAE metrics.
+      </p>
+    </div>
 
-    <li>
-      <details>
-        <summary>AI Chatbot for College Website</summary>
-        <p>
-          NLP-based assistant designed to answer student queries and provide
-          academic information.
-        </p>
-      </details>
-    </li>
-  </ul>
+    <div class="project-card">
+      <h3>Bitcoin Price Forecasting</h3>
+      <p>
+        Predictive modeling of cryptocurrency price trends using historical
+        market data and deep learning models.
+      </p>
+    </div>
+
+    <div class="project-card">
+      <h3>AI Chatbot for College Website</h3>
+      <p>
+        NLP-based assistant designed to answer student queries and provide
+        academic information.
+      </p>
+    </div>
+  </div>
 
   <h2>Links</h2>
   <p>
