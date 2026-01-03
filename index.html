@@ -15,7 +15,7 @@
       color: #e5e7eb;
       line-height: 1.6;
 
-      /* Single unified background */
+      /* Unified background */
       background:
         linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.8)),
         url("assets/github_portfolio_bg_image.jpeg") center / cover no-repeat fixed;
@@ -92,44 +92,16 @@
       color: #cbd5f5;
     }
 
-    /* FLOATING SOCIAL LINKS */
-    .social-links {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
+    /* SHIELDS BADGES */
+    .badge-links {
       display: flex;
-      flex-direction: column;
-      gap: 14px;
-      z-index: 1000;
-    }
-
-    .social-links a {
-      width: 48px;
-      height: 48px;
-      background: rgba(2, 6, 23, 0.9);
-      border: 1px solid #1e293b;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
+      gap: 12px;
       justify-content: center;
-      font-size: 1.4rem;
-      color: #e5e7eb;
-      text-decoration: none;
-      backdrop-filter: blur(6px);
-      transition: transform 0.2s ease, border-color 0.2s ease;
+      margin-top: 32px;
     }
 
-    .social-links a:hover {
-      transform: translateY(-4px);
-      border-color: #38bdf8;
-    }
-
-    @media (max-width: 600px) {
-      .social-links {
-        flex-direction: row;
-        bottom: 20px;
-        right: 20px;
-      }
+    .badge-links img {
+      height: 28px;
     }
   </style>
 </head>
@@ -140,13 +112,25 @@
 
     <!-- INTRO -->
     <section class="intro">
-      <div class="greeting">Hello👋,there! </div>
-      <h1> My name is Kshitij Kumar Soni</h1>
-     <p class="about">
+      <div class="greeting">Hello, I’m 👋</div>
+      <h1>Kshitij Kumar Soni</h1>
+      <div class="subtitle">Computer Science Undergraduate</div>
+
+      <p class="about">
         I am a Computer Science undergraduate focused on machine learning and
         time-series forecasting, working with real-world datasets to build
         predictive models and data-driven solutions.
       </p>
+
+      <!-- SHIELDS SOCIAL BADGES -->
+      <div class="badge-links">
+        <a href="https://github.com/CodeInTheHorizon" target="_blank">
+          <img src="https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white" alt="GitHub">
+        </a>
+        <a href="https://linkedin.com/in/codeinthehorizon" target="_blank">
+          <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white" alt="LinkedIn">
+        </a>
+      </div>
     </section>
 
     <!-- PROJECTS -->
@@ -171,18 +155,12 @@
       <div class="project-card">
         <h4>MS_Stock_Prediction</h4>
         <p>
-      Lstm based stock predictor.
+          LSTM-based stock price Prediction.
         </p>
       </div>
 
     </div>
 
-  </div>
-
-  <!-- FLOATING SOCIAL ICONS -->
-  <div class="social-links">
-    <a href="https://github.com/CodeInTheHorizon" target="_blank" aria-label="GitHub">🐙</a>
-    <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-HERE" target="_blank" aria-label="LinkedIn">💼</a>
   </div>
 
 </body>
