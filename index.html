@@ -118,11 +118,28 @@
     }
 
     /* GRIDS */
-    .info-grid, .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
-    }
+ .info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* force 4 cards in a row */
+  gap: 28px;
+  align-items: stretch;
+}
+    
+@media (max-width: 1024px) {
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+    .card {
+  height: 100%;
+}
+
 
     /* CARDS */
     .card {
