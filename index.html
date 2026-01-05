@@ -14,8 +14,6 @@
       font-family: system-ui, -apple-system, sans-serif;
       color: #e5e7eb;
       line-height: 1.6;
-
-      /* Unified background */
       background:
         linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.8)),
         url("assets/github_portfolio_bg_image.jpeg") center / cover no-repeat fixed;
@@ -42,24 +40,12 @@
       height: 26px;
       opacity: 0.85;
       transition: opacity 0.2s ease, transform 0.2s ease;
-    }
-
-    /* Make GitHub & LinkedIn white */
-    .top-socials a:nth-child(1) img,
-    .top-socials a:nth-child(2) img {
       filter: invert(1);
     }
 
     .top-socials a:hover img {
       opacity: 1;
       transform: translateY(-2px);
-    }
-
-    @media (max-width: 600px) {
-      .top-socials {
-        top: 18px;
-        right: 18px;
-      }
     }
 
     /* INTRO */
@@ -89,6 +75,43 @@
     h2 {
       margin-top: 80px;
       margin-bottom: 24px;
+    }
+
+    /* INFO GRID */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-bottom: 80px;
+    }
+
+    .info-card {
+      background: rgba(2, 6, 23, 0.85);
+      border: 1px solid #1e293b;
+      border-radius: 16px;
+      padding: 24px;
+      backdrop-filter: blur(6px);
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .info-card:hover {
+      transform: translateY(-6px);
+      border-color: #38bdf8;
+    }
+
+    .info-card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .info-card p {
+      color: #cbd5f5;
+      margin: 0;
+    }
+
+    .info-card a {
+      color: #38bdf8;
+      text-decoration: none;
     }
 
     /* PROJECTS */
@@ -125,15 +148,15 @@
 
 <body>
 
-  <!-- TOP RIGHT SOCIAL LINKS -->
+  <!-- SOCIAL LINKS -->
   <div class="top-socials">
-    <a href="https://github.com/CodeInTheHorizon" target="_blank" aria-label="GitHub">
+    <a href="https://github.com/CodeInTheHorizon" target="_blank">
       <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub">
     </a>
-    <a href="https://linkedin.com/in/codeinthehorizon" target="_blank" aria-label="LinkedIn">
+    <a href="https://linkedin.com/in/codeinthehorizon" target="_blank">
       <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" alt="LinkedIn">
     </a>
-    <a href="https://www.instagram.com/codeinthehorizon_2026/" target="_blank" aria-label="Instagram">
+    <a href="https://www.instagram.com/codeinthehorizon_2026/" target="_blank">
       <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram">
     </a>
   </div>
@@ -142,7 +165,7 @@
 
     <!-- INTRO -->
     <section class="intro">
-      <div class="greeting">Hello👋,There! </div>
+      <div class="greeting">Hello 👋</div>
       <h1>Myself Kshitij Kumar Soni</h1>
 
       <p class="about">
@@ -151,6 +174,45 @@
         predictive models and data-driven solutions.
       </p>
     </section>
+
+    <!-- INFO SECTION -->
+    <h2>Profile</h2>
+    <div class="info-grid">
+
+      <div class="info-card">
+        <h3>About</h3>
+        <p>
+          Hi, I am Kshitij Kumar Soni, a 2nd year Computer Science Undergraduate
+          student at MITS, Gwalior.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h3>Education</h3>
+        <p>
+          B.Tech in Computer Science<br>
+          Madhav Institute of Technology & Science, Gwalior
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h3>Skills</h3>
+        <p>
+          Python, C/C++, Machine Learning, Time-Series Forecasting, Git, Linux
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h3>Contact</h3>
+        <p>
+          Email:
+          <a href="mailto:kshitijkumarsoni30@gmail.com">
+            kshitijkumarsoni30@gmail.com
+          </a>
+        </p>
+      </div>
+
+    </div>
 
     <!-- PROJECTS -->
     <h2>Projects</h2>
@@ -173,9 +235,9 @@
       </div>
 
       <div class="project-card">
-        <h3>MS_Stock_Prediction</h3>
+        <h3>MS Stock Prediction</h3>
         <p>
-          LSTM-based stock price prediction.
+          LSTM-based stock price prediction model.
         </p>
       </div>
 
