@@ -181,6 +181,32 @@
       opacity: 1;
       transform: translateY(0);
     }
+    /* PROJECTS GRID – HORIZONTAL LAYOUT */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards in one row */
+  gap: 28px;
+  align-items: stretch;
+}
+
+/* Responsive behavior */
+@media (max-width: 1024px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Ensure equal-height cards */
+.projects .card {
+  height: 100%;
+}
+
   </style>
 </head>
 
