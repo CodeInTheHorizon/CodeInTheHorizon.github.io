@@ -31,30 +31,10 @@
     .container {
       max-width: 1000px;
       margin: 0 auto;
-      padding: 110px 20px 80px;
+      padding: 90px 20px 80px;
     }
 
-    /* LOGO (TOP LEFT) */
-    .top-logo {
-      position: fixed;
-      top: 18px;
-      left: 24px;
-      z-index: 1000;
-    }
-
-    .top-logo img {
-      height: 42px;
-      width: auto;
-      opacity: 0.9;
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-
-    .top-logo img:hover {
-      transform: scale(1.05);
-      opacity: 1;
-    }
-
-    /* SOCIAL ICONS (TOP RIGHT) */
+    /* SOCIAL ICONS */
     .top-socials {
       position: fixed;
       top: 20px;
@@ -76,6 +56,25 @@
       transform: translateY(-2px);
     }
 
+    /* TOP PORTFOLIO LOGO */
+    .portfolio-logo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 32px;
+    }
+
+    .portfolio-logo img {
+      height: 48px;
+      width: auto;
+      opacity: 0.95;
+    }
+
+    @media (max-width: 768px) {
+      .portfolio-logo img {
+        height: 38px;
+      }
+    }
+
     /* INTRO */
     .intro {
       text-align: center;
@@ -83,7 +82,7 @@
     }
 
     .greeting {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       font-weight: 500;
       letter-spacing: 0.04em;
       text-transform: uppercase;
@@ -165,36 +164,10 @@
       opacity: 1;
       transform: translateY(0);
     }
-    /* HERO TITLE WITH INLINE LOGO */
-.hero-title {
-  display: inline-flex;
-  align-items: flex-start;   /* logo sits slightly higher */
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.hero-logo {
-  height: 34px;              /* smaller logo */
-  width: auto;
-  margin-top: 4px;           /* pushes logo upward */
-  opacity: 0.95;
-}
-
-@media (max-width: 768px) {
-  .hero-logo {
-    height: 26px;
-    margin-top: 2px;
-  }
-}
-
   </style>
 </head>
 
 <body>
-
-  <!-- LOGO -->
-
 
   <!-- SOCIALS -->
   <div class="top-socials">
@@ -211,14 +184,15 @@
 
   <div class="container">
 
+    <!-- TOP LOGO -->
+    <div class="portfolio-logo reveal">
+      <img src="assets/CodeInTheHorizon_logo.svg" alt="CodeInTheHorizon Logo">
+    </div>
+
     <!-- INTRO -->
     <section class="intro reveal">
-      <div class="greeting">Hello, there</div>
-     <div class="hero-title">
-  <h1>Welcome to CodeInTheHorizon</h1>
-  <img src="assets/CodeInTheHorizon_logo.svg" alt="CodeInTheHorizon Logo" class="hero-logo">
-</div>
-
+      <h1>Welcome to CodeInTheHorizon</h1>
+     <div class="greeting">Hello, there :)</div> 
       <p class="about">
         I’m a Computer Science undergraduate who enjoys building practical projects,
         learning new technologies, and refining problem-solving skills. My current
