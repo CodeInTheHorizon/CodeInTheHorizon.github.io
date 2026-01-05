@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kshitij Kumar Soni | Computer Science</title>
 
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     * { box-sizing: border-box; }
 
@@ -12,7 +15,7 @@
 
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, sans-serif;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
       color: #e5e7eb;
       line-height: 1.6;
       background:
@@ -28,10 +31,30 @@
     .container {
       max-width: 1000px;
       margin: 0 auto;
-      padding: 100px 20px 80px;
+      padding: 110px 20px 80px;
     }
 
-    /* SOCIAL ICONS */
+    /* LOGO (TOP LEFT) */
+    .top-logo {
+      position: fixed;
+      top: 18px;
+      left: 24px;
+      z-index: 1000;
+    }
+
+    .top-logo img {
+      height: 42px;
+      width: auto;
+      opacity: 0.9;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .top-logo img:hover {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+
+    /* SOCIAL ICONS (TOP RIGHT) */
     .top-socials {
       position: fixed;
       top: 20px;
@@ -56,31 +79,43 @@
     /* INTRO */
     .intro {
       text-align: center;
-      margin-bottom: 80px;
+      margin-bottom: 90px;
     }
 
     .greeting {
-      color: #cbd5f5;
-      margin-bottom: 6px;
+      font-size: 1.15rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #93c5fd;
+      margin-bottom: 12px;
     }
 
     h1 {
-      font-size: 2.8rem;
+      font-size: 3.2rem;
+      font-weight: 700;
       margin: 0;
+      background: linear-gradient(90deg, #38bdf8, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     @media (max-width: 768px) {
-      h1 { font-size: 2.1rem; }
+      h1 { font-size: 2.3rem; }
+      .greeting { font-size: 1rem; }
     }
 
     .about {
-      max-width: 700px;
-      margin: 22px auto 0;
+      max-width: 720px;
+      margin: 26px auto 0;
+      font-size: 1.05rem;
       color: #cbd5f5;
     }
 
     h2 {
       margin: 70px 0 24px;
+      font-size: 1.6rem;
+      font-weight: 600;
     }
 
     /* GRIDS */
@@ -108,12 +143,15 @@
 
     .card h3 {
       margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
       color: #f8fafc;
     }
 
     .card p {
       color: #e2e8f0;
       margin: 0;
+      font-size: 0.95rem;
     }
 
     /* REVEAL */
@@ -132,6 +170,11 @@
 
 <body>
 
+  <!-- LOGO -->
+  <div class="top-logo">
+    <img src="assets/CodeInTheHorizon_logo.png" alt="CodeInTheHorizon Logo">
+  </div>
+
   <!-- SOCIALS -->
   <div class="top-socials">
     <a href="https://github.com/CodeInTheHorizon" target="_blank">
@@ -149,12 +192,12 @@
 
     <!-- INTRO -->
     <section class="intro reveal">
-      <div class="greeting">Hello 👋,there!</div>
-      <h1>welcome to CodeInTheHorizon</h1>
+      <div class="greeting">Hello, there</div>
+      <h1>Welcome to CodeInTheHorizon</h1>
       <p class="about">
-       I’m a Computer Science Undergraduate student.
-        I enjoy building practical projects, learning new technologies, and refining my problem-solving skills. 
-        My current work revolves around web development, DSA, and applied AI projects.
+        I’m a Computer Science undergraduate who enjoys building practical projects,
+        learning new technologies, and refining problem-solving skills. My current
+        work focuses on web development, DSA, and applied AI projects.
       </p>
     </section>
 
@@ -163,8 +206,10 @@
     <div class="info-grid">
       <div class="card reveal">
         <h3>About</h3>
-        <p> Hi, I am Kshitij Kumar Soni, a 2nd year Computer Science Undergraduate
-          student at MITS, Gwalior.</p>
+        <p>
+          Hi, I am Kshitij Kumar Soni, a 2nd year Computer Science undergraduate
+          student at MITS, Gwalior.
+        </p>
       </div>
 
       <div class="card reveal">
@@ -174,7 +219,7 @@
 
       <div class="card reveal">
         <h3>Skills</h3>
-        <p>Python, C/C++, Machine Learning, Latex</p>
+        <p>Python, C/C++, Machine Learning, LaTeX</p>
       </div>
 
       <div class="card reveal">
