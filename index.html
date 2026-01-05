@@ -165,6 +165,29 @@
       opacity: 1;
       transform: translateY(0);
     }
+    /* HERO TITLE WITH INLINE LOGO */
+.hero-title {
+  display: inline-flex;
+  align-items: flex-start;   /* logo sits slightly higher */
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-logo {
+  height: 34px;              /* smaller logo */
+  width: auto;
+  margin-top: 4px;           /* pushes logo upward */
+  opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+  .hero-logo {
+    height: 26px;
+    margin-top: 2px;
+  }
+}
+
   </style>
 </head>
 
